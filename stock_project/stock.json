@@ -1,0 +1,8 @@
+[
+{"stock_name": "2330 台積電", "date": "2025-02-05", "deal_price": "1110", "opening_price": "1110", "closing_price": "1095", "highest_price": "1120", "lowest_price": "1105"}
+][
+{"stock_name": "2330 台積電", "date": "2025-02-06", "deal_price": "1115", "opening_price": "1120", "closing_price": "1110", "highest_price": "1120", "lowest_price": "1105"}
+][
+{"stock_name": "2330 台積電", "date": "2025-02-06", "deal_price": 1115.0, "opening_price": 1120.0, "closing_price": 1110.0, "highest_price": 1120.0, "lowest_price": 1105.0},
+{"stock_name": "2440 太空梭", "date": "2025-02-06", "deal_price": 12.25, "opening_price": 12.4, "closing_price": 12.15, "highest_price": 12.4, "lowest_price": 12.1}
+]
