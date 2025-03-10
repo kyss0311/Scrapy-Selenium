@@ -5,9 +5,9 @@ from .. items import ArticleItem,CommentItem
 
 class PttSpider(scrapy.Spider):  # 繼承 scrapy.Spider
     ROOT_URL = "https://www.ptt.cc"
-    PAGE_LIMIT = 3
+    PAGE_LIMIT = 10
     current_page = 1
-    board = 'Gossiping'
+    board = 'Soft_Job'
 
 
     name = 'ptt'
@@ -22,7 +22,7 @@ class PttSpider(scrapy.Spider):  # 繼承 scrapy.Spider
             yield scrapy.Request(
                 url=url,
                 callback=self.parse,
-                cookies={'over18': '1'}
+                # cookies={'over18': '1'}
             )
       
 
