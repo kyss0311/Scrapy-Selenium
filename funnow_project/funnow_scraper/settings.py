@@ -99,12 +99,12 @@ USER_AGENT = [  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (K
 # scrapy_selenium
 SELENIUM_DRIVER_NAME = 'chrome'  # 瀏覽器名稱
 SELENIUM_DRIVER_EXECUTABLE_PATH = '../chromedriver.exe'  # 驅動程式路徑，取決於執行時的路徑
-SELENIUM_DRIVER_ARGUMENTS = ['-headless']  # 開啟瀏覽器的GUI，['-headless']則是不開啟瀏覽器
+SELENIUM_DRIVER_ARGUMENTS = ['-head']  # 開啟瀏覽器的GUI，['-headless']則是不開啟瀏覽器
 FEED_EXPORT_ENCODING = 'utf8'  # 設定編碼，為了等等輸出的json做準備
 
 # database settings
 POSTGRESQL_HOST = 'localhost'
 POSTGRESQL_DATABASE = 'funnow'
 POSTGRESQL_USERNAME = 'postgres'  # 預設的
-POSTGRESQL_PASSWORD = 'ky03110311'
+POSTGRESQL_PASSWORD = '---------'
 

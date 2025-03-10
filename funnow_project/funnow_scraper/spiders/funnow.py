@@ -3,15 +3,14 @@
 
 import scrapy
 from scrapy_selenium import SeleniumRequest
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import NoSuchElementException, ElementNotInteractableException,TimeoutException
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.common.exceptions import NoSuchElementException, ElementNotInteractableException,TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from ..items import FunnowScraperItem, ProductInfoItem
 import time
-
+# 測試模組
 # from scrapy.shell import inspect_response
-
 
 class FunnowSpider(scrapy.Spider):
     name = "funnow"
@@ -25,7 +24,7 @@ class FunnowSpider(scrapy.Spider):
         for i in range(len(self.categories)):
             yield SeleniumRequest(
                 url=self.url + self.categories[i],  # 初始request是向第一個category發請求
-                # selenium會等5秒後再擷取當前的頁面HTML
+                # selenium會等最多10秒直到出現footer後再擷取當前的頁面HTML
                 wait_time=10,
                 wait_until=EC.visibility_of_element_located((By.CSS_SELECTOR, "footer")),
                 script="window.scroll(0, document.body.scrollHeight)",
@@ -34,10 +33,9 @@ class FunnowSpider(scrapy.Spider):
             time.sleep(3)
 
     def parse(self, response, **kwargs):
+        # 測試模組
         # inspect_response(response, self)
         # self.logger.warning(response.css(".product-list .product-info .card-title p::text").get())
-
-        # print(f"scraping {self.url+self.categories[0]}...")
 
         for product in response.css(".product-list__col"):
             item = FunnowScraperItem()
